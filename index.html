@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="input-container">
+      <h1 class="input-container-heading">Metric/Imperial Unit Conversion</h1>
+      <p class="error-message">Please enter a number between 1 and 1000</p>
+      <input
+        oninput="validity.valid||(value='');"
+        onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+        type="number"
+        class="unit-input"
+        name="unit-input"
+        id="unit-input"
+        placeholder=" 0 "
+        min="0"
+        max="1000"
+      />
+      <button class="convert-btn">Convert</button>
+    </div>
+    <div class="results-container">
+      <div class="length-container">
+        <h3 class="results-heading">Length (Meters/Feet)</h3>
+        <p class="results-text length-results-text">test</p>
+      </div>
+      <div class="volume-container">
+        <h3 class="results-heading">Volume (Liters/Gallons)</h3>
+        <p class="results-text volume-results-text">test</p>
+      </div>
+      <div class="mass-container">
+        <h3 class="results-heading">Mass (Kilograms/Pounds)</h3>
+        <p class="results-text mass-results-text">test</p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
