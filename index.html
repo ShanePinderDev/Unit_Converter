@@ -11,7 +11,9 @@
   <body>
     <div class="input-container">
       <h1 class="input-container-heading">Metric/Imperial Unit Conversion</h1>
-      <p class="error-message">Please enter a number between 1 and 1000</p>
+      <p class="error-message" id="error-message">
+        Please enter a number between 1 and 1000
+      </p>
       <input
         oninput="validity.valid||(value='');"
         onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
@@ -23,20 +25,26 @@
         min="0"
         max="1000"
       />
-      <button class="convert-btn">Convert</button>
+      <button class="convert-btn" id="convert-btn">Convert</button>
     </div>
     <div class="results-container">
       <div class="length-container">
         <h3 class="results-heading">Length (Meters/Feet)</h3>
-        <p class="results-text length-results-text">test</p>
+        <p class="results-text length-results-text" id="length-results-text">
+          0 liters = 0 gallons | 0 gallons = 0 liters
+        </p>
       </div>
       <div class="volume-container">
         <h3 class="results-heading">Volume (Liters/Gallons)</h3>
-        <p class="results-text volume-results-text">test</p>
+        <p class="results-text volume-results-text" id="volume-results-text">
+          0 liters = 0 gallons | 0 gallons = 0 liters
+        </p>
       </div>
       <div class="mass-container">
         <h3 class="results-heading">Mass (Kilograms/Pounds)</h3>
-        <p class="results-text mass-results-text">test</p>
+        <p class="results-text mass-results-text" id="mass-results-text">
+          0 liters = 0 gallons | 0 gallons = 0 liters
+        </p>
       </div>
     </div>
     <script src="index.js"></script>
